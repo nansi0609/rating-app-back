@@ -5,7 +5,7 @@ const connectDB = require("./connection");
 connectDB();
 app.use(cors());
 app.use(express.json(extended = true));
-app.use('/', require('../API/user'));
+app.use('/', require('./USER'));
 app.post('/', async(req, res) => {
     console.log(req.body)
 
