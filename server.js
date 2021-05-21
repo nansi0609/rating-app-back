@@ -6,9 +6,9 @@ connectDB();
 app.use(cors());
 app.use(express.json(extended = true));
 app.use('/', require('./USER'));
-app.get('/',async(req,res) =>{
-    res.send("Hello")
-})
+app.get('/', function (req, res) {
+    res.send('hello world')
+  })
 app.post('/', async(req, res) => {
     console.log(req.body)
 
