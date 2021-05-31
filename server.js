@@ -1,6 +1,6 @@
-import express ,{json} from 'Express';
-import cors from 'cors';
-import mongoose from 'mongoose';
+const express= require('Express');
+const  cors = require('cors') ;
+const  mongoose = require('mongoose');
 
 var app = express();
 
