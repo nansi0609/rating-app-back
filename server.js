@@ -1,5 +1,5 @@
 const express= require('Express');
-const  cors = require('cors') ;
+const cors = require('cors') ;
 const  mongoose = require('mongoose');
 
 var app = express();
@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json( { extended: true } ));
  
 
-mongoose.connect('mongodb://localhost:27017/ratingapp', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://nansit:nansit@cluster0.n2qpw.mongodb.net/ratingapp?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
@@ -61,9 +61,11 @@ var model = mongoose.model('attr', ratingapp);
     console.log(req.body);
 });
     
-app.use('/',(req, res, next) => { 
-    res.setHeader('Access-Control-Allow-Origin',  "application/json"); 
+app.use('/user',(req, res, next) => { 
+    res.setHeader('Access-Control-Allow-Origin : https://candidate-rating.archesoftronix.in/user'); 
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Credentials : true');
+    res.setHeader('Access-Control-Allow-Headers : Origin, Content-Type, Accept');
 })
 // app.get('/get-method',function(req,res) {
 //     res.send("Hello")
