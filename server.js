@@ -62,7 +62,7 @@ var model = mongoose.model('attr', ratingapp);
 });
     
 app.use('/user',(req, res, next) => { 
-    res.setHeader('Access-Control-Allow-Origin : https://candidate-rating.archesoftronix.in/user'); 
+    res.setHeader('Access-Control-Allow-Origin : https://candidate-rating.archesoftronix.in/'); 
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Credentials : true');
     res.setHeader('Access-Control-Allow-Headers : Origin, Content-Type, Accept');
